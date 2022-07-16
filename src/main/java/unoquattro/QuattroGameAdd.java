@@ -114,14 +114,6 @@ public class QuattroGameAdd {
 	//shuffle the draw pile cards 
 	Collections.shuffle(cardListStack); 		
 		
-		//deals cards to all of players (each 3cards)
-//		for (int i = 0; i < numberOfPlayers - 1; i++) {
-//			for (int j = 0; j <= numberOfPlayers - 1; j++) {
-//				playerList.get(j).addCardToHand(cardListStack.get(j)); 
-//				cardListStack.remove(j);
-//			}
-//		}
-		
 		//deals cards to all of players (each 5cards)
 		for (int i = 0; i < numberOfPlayers + 1; i++) { //cards number
 			for (int j = 0; j <= numberOfPlayers; j++) { //to player 
