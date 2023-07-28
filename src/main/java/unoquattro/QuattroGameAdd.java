@@ -39,7 +39,7 @@ public class QuattroGameAdd {
         playByTurn(); //play cards until a winner is determined
     }
 	
-    //recursion 연습
+    //recursion
     public ArrayList<Player> reverse(ArrayList<Player> arrayList) {
     	//base condition when the list size is 1
     	if (arrayList.size() > 1) {
