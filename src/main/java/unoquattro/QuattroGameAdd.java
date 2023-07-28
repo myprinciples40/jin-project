@@ -226,12 +226,12 @@ public class QuattroGameAdd {
 											if (playerList.get(i).getCardList().get(x).getCardCode() == 61) {  
 												isValidCard = true;	
 												startingCardNumber--;
-												//와일드 카드는 discard에 놓고
+												//Place the wildcard in discard 
 												cardListDiscard.add(playerList.get(i).getCardList().get(x));
 												playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(x));	
 												System.out.println(playerList.get(i).getName() + " has played " + sc2wild1.getString());
 												System.out.println(playerList.get(i).getName() + " has the following number of cards: " + startingCardNumber);
-												//다음턴은 2장 추가
+												//Next turn adds 2 cards
 												if (i >= 4) {
 													for (int j = 0; j < 2; j++) {
 														playerList.get(0).addCardToHand(cardListStack.get(0)); 
@@ -259,12 +259,12 @@ public class QuattroGameAdd {
 											else if (playerList.get(i).getCardList().get(x).getCardCode() == 62) {
 												isValidCard = true;	
 												startingCardNumber--;
-												//와일드 카드는 discard에 놓고
+												//Place the wildcard in discard 
 												cardListDiscard.add(playerList.get(i).getCardList().get(x));
 												playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(x));	
 												System.out.println(playerList.get(i).getName() + " has played " + sc4wild2.getString());
 												System.out.println(playerList.get(i).getName() + " has the following number of cards: " + startingCardNumber);
-												//다음턴은 4장 추가
+												//Next turn adds 4 cards
 												if (i >= 4) {
 													for (int j = 0; j < 4; j++) {
 														playerList.get(0).addCardToHand(cardListStack.get(0)); 
@@ -292,7 +292,7 @@ public class QuattroGameAdd {
 											else if (playerList.get(i).getCardList().get(x).getCardCode() == 63) {
 												isValidCard = true;	
 												startingCardNumber--;
-												//와일드 카드는 discard에 놓고
+												//Place the wildcard in discard 
 												cardListDiscard.add(playerList.get(i).getCardList().get(x));
 												playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(x));	
 												System.out.println(playerList.get(i).getName() + " has played " + wcReverse.getString());
@@ -312,7 +312,7 @@ public class QuattroGameAdd {
 											else if (playerList.get(i).getCardList().get(x).getCardCode() == 64) {
 												isValidCard = true;	
 												startingCardNumber--;
-												//와일드 카드는 discard에 놓고
+												//Place the wildcard in discard 
 												cardListDiscard.add(playerList.get(i).getCardList().get(x));
 												playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(x));	
 												System.out.println(playerList.get(i).getName() + " has played " + wcSkip.getString());
@@ -478,10 +478,10 @@ public class QuattroGameAdd {
 						isValidCard = false;
 						//checking the bot player's card whether they have the matching card 
 						for (int j = 0; j < playerList.get(i).getCardList().size(); j++) {
-							//와일드 카드(2장 먹이기)를 컴퓨터가 가지고 있을 때
+							//When the computer has a wild card (2 cards penalty)
 							if (playerList.get(i).getCardList().get(j).getCardCode() == 61) {
 								isValidCard = true;	
-								//와일드 카드는 discard에 놓고
+								//Place the wildcard in discard and the
 								System.out.println("Player " + playerList.get(i).getName() + " has played the following card: ");
 								System.out.println(sc2wild1.getString());
 								sc2wild1.activateAbility();
@@ -495,7 +495,7 @@ public class QuattroGameAdd {
 									System.exit(0);
 								}	
 								System.out.println();
-								//다음턴은 2장 추가
+								//Next turn adds 2 cards
 								if (i >= 4) {
 									playerList.get(0).addCardToHand(cardListStack.get(0)); 
 									cardListStack.remove(0);													
@@ -562,7 +562,7 @@ public class QuattroGameAdd {
 							else if (playerList.get(i).getCardList().get(j).getCardCode() == 63) {
 								isValidCard = true;	
 								startingCardNumber--;
-								//와일드 카드는 discard에 놓고
+								//Place the wildcard in discard and the
 								cardListDiscard.add(playerList.get(i).getCardList().get(j));
 								playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(j));	
 								System.out.println("Player " + playerList.get(i).getName() + " has played the following card: ");	
@@ -587,7 +587,7 @@ public class QuattroGameAdd {
 							else if (playerList.get(i).getCardList().get(j).getCardCode() == 64) {
 								isValidCard = true;	
 								startingCardNumber--;
-								//와일드 카드는 discard에 놓고
+								//Place the wildcard in discard and the
 								cardListDiscard.add(playerList.get(i).getCardList().get(j));
 								playerList.get(i).removeCardFromHand(playerList.get(i).getCardList().get(j));	
 								System.out.println("Player " + playerList.get(i).getName() + " has played the following card: ");	
